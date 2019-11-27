@@ -98,6 +98,7 @@ class VenueBooking(models.Model):
     billing_profile = models.ForeignKey(BillingProfile, on_delete=models.CASCADE, blank=True, null=True)
     quote = models.OneToOneField(Quote, on_delete=models.CASCADE)
 
+    venue_id = models.IntegerField(blank=True, null=True)
     booking_date = models.DateField(blank=True, null=True)
     guest = models.PositiveIntegerField(blank=True, null=True)
 

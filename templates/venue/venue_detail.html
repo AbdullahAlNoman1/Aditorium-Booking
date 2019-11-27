@@ -29,6 +29,26 @@
         }
     </style>
     {% endblock%}
+
+    {% block js %}
+    <script>
+        (function ($) {
+            var dateInput = $('#id_booking_date');
+            /*
+            var date = new Date();
+            var cYear = date.getFullYear();
+            var cMonth = date.getMonth();
+            var cDate = date.getDate();
+            console.log(cYear, cMonth, cDate);
+            */
+            dateInput.attr("autocomplete","off");
+            dateInput.datepicker({
+                minDate: +1
+            });
+        })(jQuery);
+    </script>
+    {% endblock %}
+
     {% block content %}
         <!-- page-header -->
         <div class="list-single-carousel mt-5">
@@ -90,15 +110,9 @@
                         <span class="vendor-price">
                                         {{ object.address }}
                                     </span>
-                        <span class="vendor-text"><a href="#location" class="btn-secondary-link ml-2">View Map</a></span></div>
-                    <div class="vendor-meta-item vendor-meta-item-bordered">
-                        <span class="vendor-guest">
-                            {% for type in object.booking_type %}
-                            {{ forloop.counter }}.{{ type|title }} 
-                            {% endfor %}
-                        </span>
-                        <span class="vendor-text">Booking Session</span>
+                        <span class="vendor-text"><a href="#location" class="btn-secondary-link ml-2">View Map</a></span>
                     </div>
+
                 </div>
             </div>
         </div>
