@@ -15,7 +15,7 @@ Python 3+ and Django 2+
    
 3. Create A src folder
    - cd src
-   - download project inside src Folder/ [ can download with commad == git clone https://github.com/sajalmia381/ams/ . ]
+   - download project inside src Folder/ [ can download with commad == git clone https://github.com/noman381/ams/ . ]
    
 4. inside Src Folder
    - pip install -r requirements.txt
